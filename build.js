@@ -10,52 +10,63 @@ const path = require('path')
 const options = {
   padding: 1,
   margin: 1,
-  borderStyle: 'round'
+  borderStyle: {
+    topLeft: ' ',
+    topRight: ' ',
+    bottomLeft: ' ',
+    bottomRight: ' ',
+    horizontal: ' ',
+    vertical: ' '
+  },
+  backgroundColor: 'white',
 }
 
 // Text + chalk definitions
+const descriptionText = 'I ❤ music, cycling, football and software engineering!';
 const data = {
-  name: chalk.white('               Tierney Cyren'),
-  handle: chalk.white('bitandbang'),
-  work: chalk.white('Senior Cloud Developer Advocate at Microsoft'),
-  opensource: chalk.white('Node.js Community Committee ') + chalk.green('⬢'),
-  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('bitandbang'),
-  npm: chalk.gray('https://npmjs.com/') + chalk.red('~bnb'),
-  github: chalk.gray('https://github.com/') + chalk.green('bnb'),
-  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('bitandbang'),
-  web: chalk.cyan('https://bnb.im'),
-  npx: chalk.red('npx') + ' ' + chalk.white('bitandbang'),
-  labelWork: chalk.white.bold('       Work:'),
-  labelOpenSource: chalk.white.bold('Open Source:'),
-  labelTwitter: chalk.white.bold('    Twitter:'),
-  labelnpm: chalk.white.bold('        npm:'),
-  labelGitHub: chalk.white.bold('     GitHub:'),
-  labelLinkedIn: chalk.white.bold('   LinkedIn:'),
-  labelWeb: chalk.white.bold('        Web:'),
-  labelCard: chalk.white.bold('       Card:')
+  name: chalk.black('Kyousuke Abe'),
+  desc: chalk.black(descriptionText),
+  handle: chalk.black('kaave | junkjunctions'),
+  work: chalk.black('Web Developer at ') + chalk.red('FRAMELUNCH ') + chalk.black('inc.'),
+  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('junkjunctions'),
+  github: chalk.gray('https://github.com/') + chalk.green('kaave'),
+  facebook: chalk.gray('https://facebook.com/') + chalk.blue('kyousuke.abe.9'),
+  wantedly: chalk.gray('https://www.wantedly.com/users/') + chalk.green('57487254'),
+  web: chalk.magenta('https://kaave.github.io/'),
+  npx: chalk.red('npx') + ' ' + chalk.black('mynameiskyousukeabe'),
+
+  labelWork: chalk.black.bold('       Work:'),
+  labelTwitter: chalk.black.bold('    Twitter:'),
+  labelGitHub: chalk.black.bold('     GitHub:'),
+  labelFacebook: chalk.black.bold('   facebook:'),
+  labelWantedly: chalk.black.bold('   Wantedly:'),
+  labelWeb: chalk.black.bold('        Web:'),
+  labelCard: chalk.black.bold('       Card:')
 }
 
 // Actual strings we're going to output
 const newline = '\n'
-const heading = `${data.name} / ${data.handle}`
+const heading = `${data.name} a.k.a. ${data.handle}`
 const working = `${data.labelWork}  ${data.work}`
-const opensourcing = `${data.labelOpenSource}  ${data.opensource}`
+const description = data.desc;
+const br = chalk.black('-'.repeat(descriptionText.length + 1));
 const twittering = `${data.labelTwitter}  ${data.twitter}`
-const npming = `${data.labelnpm}  ${data.npm}`
 const githubing = `${data.labelGitHub}  ${data.github}`
-const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`
+const facebooking = `${data.labelFacebook}  ${data.facebook}`
+const wantedlying = `${data.labelWantedly}  ${data.wantedly}`
 const webing = `${data.labelWeb}  ${data.web}`
 const carding = `${data.labelCard}  ${data.npx}`
 
 // Put all our output together into a single variable so we can use boxen effectively
-const output = heading + // data.name + data.handle
+const output = heading + newline + // data.name + data.handle
+               description + newline +
+               br +
                newline + newline + // Add one whole blank line
                working + newline + // data.labelWork + data.work
-               opensourcing + newline + newline + // data.labelOpenSource + data.opensource
                twittering + newline + // data.labelTwitter + data.twitter
-               npming + newline + // data.labelnpm + data.npm
                githubing + newline + // data.labelGitHub + data.github
-               linkedining + newline + // data.labelLinkedIn + data.linkedin
+               facebooking + newline + // data.labelFacebook + data.github
+               wantedlying + newline +
                webing + newline + newline + // data.labelWeb + data.web
                carding // data.labelCard + data.npx
 
