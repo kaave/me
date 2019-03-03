@@ -6,6 +6,10 @@
   "bin": {
     "bitandbang": "./bin/card.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaave/mynameiskyousukeabe.git"
+  },
   "scripts": {
     "prepublish": "npm run build",
     "build": "node build.js",
