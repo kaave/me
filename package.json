@@ -1,14 +1,14 @@
 {
-  "name": "mynameiskyousukeabe",
-  "version": "0.0.1",
+  "name": "@kaave/me",
+  "version": "0.1.0",
   "description": "A personal card for Kyousuke Abe (@junkjunctions)",
   "main": "/bin/card.js",
   "bin": {
-    "bitandbang": "./bin/card.js"
+    "main": "./bin/card.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaave/mynameiskyousukeabe.git"
+    "url": "https://github.com/kaave/me.git"
   },
   "scripts": {
     "prepublish": "npm run build",
