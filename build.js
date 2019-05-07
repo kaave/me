@@ -30,13 +30,15 @@ const data = {
   work: chalk.black('Web Developer at ') + chalk.red('FRAMELUNCH ') + chalk.black('inc.'),
   twitter: chalk.gray('https://twitter.com/') + chalk.cyan('junkjunctions'),
   github: chalk.gray('https://github.com/') + chalk.green('kaave'),
+  npm: chalk.gray('https://www.npmjs.com/') + chalk.red('~kaave'),
   facebook: chalk.gray('https://facebook.com/') + chalk.blue('kyousuke.abe.9'),
   wantedly: chalk.gray('https://www.wantedly.com/users/') + chalk.green('57487254'),
   web: chalk.magenta('https://kaave.github.io/'),
-  npx: chalk.red('npx') + ' ' + chalk.black('mynameiskyousukeabe'),
+  npx: chalk.red('npx') + ' ' + chalk.black('@kaave/me'),
 
   labelWork: chalk.black.bold('       Work:'),
   labelTwitter: chalk.black.bold('    Twitter:'),
+  labelNpm: chalk.black.bold('        npm:'),
   labelGitHub: chalk.black.bold('     GitHub:'),
   labelFacebook: chalk.black.bold('   facebook:'),
   labelWantedly: chalk.black.bold('   Wantedly:'),
@@ -52,6 +54,7 @@ const description = data.desc;
 const br = chalk.black('-'.repeat(descriptionText.length + 1));
 const twittering = `${data.labelTwitter}  ${data.twitter}`
 const githubing = `${data.labelGitHub}  ${data.github}`
+const npming = `${data.labelNpm}  ${data.npm}`
 const facebooking = `${data.labelFacebook}  ${data.facebook}`
 const wantedlying = `${data.labelWantedly}  ${data.wantedly}`
 const webing = `${data.labelWeb}  ${data.web}`
@@ -65,6 +68,7 @@ const output = heading + newline + // data.name + data.handle
                working + newline + // data.labelWork + data.work
                twittering + newline + // data.labelTwitter + data.twitter
                githubing + newline + // data.labelGitHub + data.github
+               npming + newline + // data.labelNpm + data.npm
                facebooking + newline + // data.labelFacebook + data.github
                wantedlying + newline +
                webing + newline + newline + // data.labelWeb + data.web
