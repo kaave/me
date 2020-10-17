@@ -1,6 +1,6 @@
 {
   "name": "@kaave/me",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A personal card for Kyousuke Abe (@junkjunctions)",
   "main": "/bin/card.js",
   "bin": {
